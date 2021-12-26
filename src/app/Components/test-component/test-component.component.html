@@ -1,0 +1,22 @@
+<p>test-component works!</p>
+<button (click)="getData('hello')">Get Data</button>
+<br>
+<input type="text" #box (keyup)="getData(box.value)" placeholder="Event keyup" />
+<input type="text" #box1 (keydown)="getData(box1.value)" placeholder="Event down" />
+<input type="text" #box2 (blur)="getData(box2.value)" placeholder="Event Blur" />
+<input type="text" #box3 (input)="getData(box3.value)" placeholder="Event input" />
+
+<h1 (mouseover)="getData('mouse hover')">
+    Hover to print in console Mouse Hover
+</h1><br>
+<h1 (mouseleave)="getData('mouse leave')">
+    Hover to print in console Mouse Leave
+</h1>
+<hr>
+<input type="text" #box4 (input)="getTextVal(box4.value)" name="name" placeholder="Enter Name" />
+<button type="button" (click)="alertName(box4.value)">Click tos show name</button>
+<p><strong>Input value is : </strong>{{ name }}</p>
+<hr>
+<h1>{{count}}</h1>
+<button type="button" (click)="counter('minus')">-</button>
+<button type="button" (click)="counter('add')">+</button>
