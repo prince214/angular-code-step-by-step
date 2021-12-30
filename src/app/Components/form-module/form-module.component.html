@@ -1,0 +1,18 @@
+<div style="width: 500px; margin: auto; padding: 50px;">
+    <h1>Template Driven Form</h1>
+    <form #loginForm="ngForm" (ngSubmit)="userLogin(loginForm.value)">
+        <input type="text" name="name" ngModel placeholder="Enter Name" /><br>
+        <input type="password" name="password" ngModel placeholder="Enter Password" /><br>
+        <button type="submit">Login</button>
+    </form>
+    <br><br>
+    <h1>Reactive Driven Form</h1>
+    <form [formGroup]="reactiveForm" (ngSubmit)="userLogin(reactiveForm.value)">
+        <input type="text" name="r_user" formControlName="r_user" ngModel placeholder="Enter Name" /><br>
+        <span style="color: red;" *ngIf="userValidator && userValidator.invalid && userValidator.touched">Email is invalid</span>
+        <br>
+        <input type="password" name="r_password" formControlName="r_password" ngModel placeholder="Enter Password" /><br>
+        <span style="color: red;" *ngIf="passwordValidator && passwordValidator.invalid && passwordValidator.touched">Password must be minimum of 5 characters</span><br>
+        <button [disabled]="reactiveForm.invalid">Login</button>
+    </form>
+</div>
