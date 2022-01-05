@@ -1,51 +1,5 @@
-<app-header></app-header>
-<!-- <br><br>
-<app-todo></app-todo>
-<br>
-<br><br><br>
-<app-form-module></app-form-module>
-<app-test-component></app-test-component>
 <app-style-test></app-style-test>
-<app-style-testv1></app-style-testv1>
 <app-style-testv2></app-style-testv2>
 <app-style-testv3></app-style-testv3>
-<app-login></app-login> -->
-<router-outlet></router-outlet> 
-<ul *ngFor="let user of tempUsers">
-    <li><a routerLink="user/{{ user.id }}">{{ user.name }}</a></li>
-</ul>
-<ul *ngFor="let user of userArr">
-    <li>{{ user.email }}</li>
-</ul>
-<app-browse-posts></app-browse-posts>
-<app-comment-post></app-comment-post>
-
- <!-- <div style="margin: auto; padding: 50px;">
-    <form #basicForm="ngForm" (ngSubmit)="submitFormData(basicForm.value)">
-        Username : <input type="text" ngModel name="username" value="" placeholder="Enter username"/><br>
-        Email: <input type="email" ngModel name="email" value="" placeholder="Enter Email"/><br>
-        Password<input type="password" ngModel name="password" value="" placeholder="Enter Password"/><br>
-        <button type="submit">Submit</button>
-    </form>
-    <strong>
-        {{userData.username}}, {{userData.email}}, {{userData.password}}
-    </strong>
-</div>
-<section>
-    <div class="example-label">Raised</div>
-    <div class="example-button-row">
-      <button mat-raised-button>Basic</button>
-      <button mat-raised-button color="primary">Primary</button>
-      <button mat-raised-button color="accent">Accent</button>
-      <button mat-raised-button color="warn">Warn</button>
-      <button mat-raised-button disabled>Disabled</button>
-      <a mat-raised-button href="https://www.google.com/" target="_blank">Link</a>
-    </div>
-  </section>
-<input type="text" [(ngModel)]="title" placeholder="2 way binding example" value="">
-<strong>{{title}}</strong>
-{{ "hello, how are you?" | titlecase }}
-
-{{ 20 | usdToInr : 75 }} -->
-
-<app-footer></app-footer>
+<app-login></app-login>
+<app-test-component></app-test-component>
