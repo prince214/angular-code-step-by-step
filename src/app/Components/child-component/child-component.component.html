@@ -1,0 +1,3 @@
+<p style="color: blue; font-size: 1.5rem;"> cc Passed Data is {{ passData }}<p>
+    <input type="text" #pdata />
+<button (click)="updatePassedDataEvent.emit(pdata.value)"> SEND DATA TO PARENT</button>
